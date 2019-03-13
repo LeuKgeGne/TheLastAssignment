@@ -14,6 +14,11 @@ public class GUIConstants {
     public static final String THIRD_GAP_TEXT = "Sort passengers";
     public static final String FOURTH_GAP_TEXT = "End the program";
 
+    //Text coordinates and strings
+    public static final byte CR_TEXT_COR_X = 1;
+    public static final byte CR_TEXT_COR_Y = 0;
+    public static final String CREATING_TEXT = "Train is created!";
+
     //Menu coordinates
     public static final byte CR_BUT_COOR_X = 0;
     public static final byte CR_BUT_COOR_Y = 0;

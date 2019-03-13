@@ -4,7 +4,6 @@ import javafx.application.Application;
 import OOP.task.GUI.ButtonManipulations;
 import OOP.task.GUI.GUIConstants;
 import OOP.task.GUI.Initialization;
-import OOP.task.SortClasses.Sorting;
 import OOP.task.TransportClasses.Train;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -17,8 +16,6 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import static javafx.application.Application.launch;
-
 public class Runner extends Application {
 
     private static final Logger logger = Logger.getLogger(Runner.class.getName());
@@ -28,7 +25,6 @@ public class Runner extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception {
-        final Train[] train = {new Train()};
         Initialization init = new Initialization();
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(GUIConstants.INSETS_TOP, GUIConstants.INSETS_RIGHT,
@@ -36,7 +32,7 @@ public class Runner extends Application {
 
         gridPane.setVgap(GUIConstants.SET_V_GAP);
         gridPane.setHgap(GUIConstants.SET_H_GAP);
-//        gridPane.add(init.text1, Constants.TEXT_1_COR_X, Constants.TEXT_1_COR_Y);
+        gridPane.add(init.getTextOfCreating(), GUIConstants.CR_TEXT_COR_X, GUIConstants.CR_TEXT_COR_Y);
 //        gridPane.add(init.text2, Constants.TEXT_2_COR_X, Constants.TEXT_2_COR_Y);
 //        gridPane.add(init.text3, Constants.TEXT_3_COR_X, Constants.TEXT_3_COR_Y);
 //        gridPane.add(init.underText1, Constants.UNDER_TEXT_1_COR_X, Constants.UNDER_TEXT_1_COR_Y);
@@ -55,9 +51,10 @@ public class Runner extends Application {
 
         init.createButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                init.setTrain(ButtonManipulations.createATrain());
+                ButtonManipulations.createATrain(init);
             }
         });
+
         init.printButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 ButtonManipulations.printInfromation(init.getTrain());
@@ -68,6 +65,7 @@ public class Runner extends Application {
                 //  ButtonManipulations.makeTryCatch(init);
             }
         });
+
         init.endProgramButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 //   ButtonManipulations.makeClearMethod(init);
