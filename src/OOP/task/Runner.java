@@ -77,7 +77,7 @@ public class Runner extends Application {
             }
         });
 
-        Scene scene = new Scene(gridPane);
+        Scene scene = new Scene(gridPane, 400, 200);
         stage.setScene(scene);
         stage.show();
     }
