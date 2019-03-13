@@ -12,7 +12,8 @@ public class GUIConstants {
     public static final String FIRST_GAP_TEXT = "Create a train";
     public static final String SECOND_GAP_TEXT = "Print piece of Info";
     public static final String THIRD_GAP_TEXT = "Sort passengers";
-    public static final String FOURTH_GAP_TEXT = "End the program";
+    public static final String FOURTH_GAP_TEXT = "Find a passenger";
+    public static final String FIVES_GAP_TEXT = "End the program";
 
     //Text coordinates and strings
     public static final byte CR_TEXT_COR_X = 1;
@@ -26,8 +27,10 @@ public class GUIConstants {
     public static final byte PR_BUT_COOR_Y = 1;
     public static final byte SORT_BUT_COOR_X = 0;
     public static final byte SORT_BUT_COOR_Y = 2;
+    public static final byte FIND_BUT_COOR_X = 0;
+    public static final byte FIND_BUT_COOR_Y = 3;
     public static final byte END_BUT_COOR_X = 0;
-    public static final byte END_BUT_COOR_Y = 3;
+    public static final byte END_BUT_COOR_Y = 4;
 
     //Login text and
 }

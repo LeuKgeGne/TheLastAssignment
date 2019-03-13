@@ -5,6 +5,10 @@ import OOP.task.MyTinyTrainFactory;
 import OOP.task.TransportClasses.Train;
 
 public class ButtonManipulations {
+    public static void findAnElement(Initialization init) {
+        Manipulations.findAPassengerByNumberOfTicket(init);
+    }
+
     public static void createATrain(Initialization init) {
         Train train;
         boolean flagOfTheCreate = false;

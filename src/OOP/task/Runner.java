@@ -4,7 +4,6 @@ import javafx.application.Application;
 import OOP.task.GUI.ButtonManipulations;
 import OOP.task.GUI.GUIConstants;
 import OOP.task.GUI.Initialization;
-import OOP.task.TransportClasses.Train;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,8 +11,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Runner extends Application {
@@ -44,7 +41,9 @@ public class Runner extends Application {
         gridPane.add(init.createButton, GUIConstants.CR_BUT_COOR_X, GUIConstants.CR_BUT_COOR_Y);
         gridPane.add(init.printButton, GUIConstants.PR_BUT_COOR_X, GUIConstants.PR_BUT_COOR_Y);
         gridPane.add(init.sortPassengersButton, GUIConstants.SORT_BUT_COOR_X, GUIConstants.SORT_BUT_COOR_Y);
+        gridPane.add(init.findPassengerButton, GUIConstants.FIND_BUT_COOR_X, GUIConstants.FIND_BUT_COOR_Y);
         gridPane.add(init.endProgramButton, GUIConstants.END_BUT_COOR_X, GUIConstants.END_BUT_COOR_Y);
+
 //        gridPane.add(init.aboveText1, Constants.ABOVE_TEXT__1_COR_X, Constants.ABOVE_TEXT__1_COR_Y);
 //        gridPane.add(init.aboveText2, Constants.ABOVE_TEXT__2_COR_X, Constants.ABOVE_TEXT__2_COR_Y);
 //        gridPane.add(init.aboveText3, Constants.ABOVE_TEXT__3_COR_X, Constants.ABOVE_TEXT__3_COR_Y);
@@ -63,6 +62,12 @@ public class Runner extends Application {
         init.sortPassengersButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 //  ButtonManipulations.makeTryCatch(init);
+            }
+        });
+
+        init.findPassengerButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                ButtonManipulations.findAnElement(init);
             }
         });
 

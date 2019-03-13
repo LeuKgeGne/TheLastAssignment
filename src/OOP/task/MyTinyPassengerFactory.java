@@ -1,7 +1,6 @@
 package OOP.task;
 
 import OOP.task.PassengerClasses.Passenger;
-import OOP.task.TransportClasses.RailCar;
 
 import java.util.Random;
 
