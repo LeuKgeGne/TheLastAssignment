@@ -8,7 +8,6 @@ public class MyTinyPassengerFactory {
     //optional return or not??
     public static Passenger createAPassenger() {
         Passenger factoryPassenger = new Passenger();
-        Random random = new Random();
         factoryPassenger.setTicketNumber(randomTicketNumber());
         factoryPassenger.setNumberOfID(convertToString());
 
@@ -28,8 +27,8 @@ public class MyTinyPassengerFactory {
     }
 
     public static String convertToString() {
-        return new String(String.valueOf(randomSymbol())
-                + String.valueOf(randomSymbol()) + String.valueOf(randomIDNumber()));
+        return new String(randomSymbol()
+                + String.valueOf(randomSymbol()) + randomIDNumber());
     }
 
     public static int randomTicketNumber() {

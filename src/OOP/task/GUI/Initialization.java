@@ -4,6 +4,8 @@ import OOP.task.TransportClasses.Train;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
@@ -19,9 +21,6 @@ public class Initialization {
 
     //Creating the text that is in the right side of buttons
     private Text textOfCreating = new Text();
-    public void setTextOfCreating(String _text) {
-        this.textOfCreating.setText(_text);
-    }
     public Text getTextOfCreating() {
         return this.textOfCreating;
     }
@@ -41,4 +40,7 @@ public class Initialization {
     public GridPane gridPane = new GridPane();
     public Insets insets = new Insets(GUIConstants.INSETS_TOP, GUIConstants.INSETS_RIGHT,
                GUIConstants.INSETS_BOTTOM, GUIConstants.INSETS_LEFT);
+    public Image image = new Image("file:C:\\Users\\Admin\\IdeaProjects\\TheLastTask\\MenuImage.jpg",
+            GUIConstants.IMAGE_WIDTH,GUIConstants.IMAGE_HEIGHT, true, true);
+    public ImageView imageView = new ImageView(image);
 }

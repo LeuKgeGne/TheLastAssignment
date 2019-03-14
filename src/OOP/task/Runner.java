@@ -8,7 +8,6 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
 import java.util.logging.Logger;
 
 public class Runner extends Application {
@@ -25,6 +24,7 @@ public class Runner extends Application {
 
         init.gridPane.setVgap(GUIConstants.SET_V_GAP);
         init.gridPane.setHgap(GUIConstants.SET_H_GAP);
+        init.gridPane.add(init.imageView, GUIConstants.IMAGE_COOR_X, GUIConstants.IMAGE_COOR_Y);
         init.gridPane.add(init.getTextOfCreating(), GUIConstants.CR_TEXT_COR_X, GUIConstants.CR_TEXT_COR_Y);
         init.gridPane.add(init.findText, GUIConstants.FND_TEXT_COOR_X, GUIConstants.FND_TEXT_COOR_Y);
         init.gridPane.add(init.findField, GUIConstants.FND_FLD_COOR_X, GUIConstants.FND_FLD_COOR_Y);
@@ -64,7 +64,7 @@ public class Runner extends Application {
             }
         });
 
-        Scene scene = new Scene(init.gridPane, 400, 200);
+        Scene scene = new Scene(init.gridPane, GUIConstants.APPLICATION_WIDTH, GUIConstants.APPLICATION_HEIGHT);
         stage.setScene(scene);
         stage.setTitle(GUIConstants.APP_NAME);
         stage.show();
