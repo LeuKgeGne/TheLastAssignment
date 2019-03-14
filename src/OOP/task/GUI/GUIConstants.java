@@ -19,6 +19,7 @@ public class GUIConstants {
     public static final byte CR_TEXT_COR_X = 1;
     public static final byte CR_TEXT_COR_Y = 0;
     public static final String CREATING_TEXT = "Train is created!";
+    public static final String FIND_FIELD_TEXT = "<-Tickets' number";
 
     //Menu coordinates
     public static final byte CR_BUT_COOR_X = 0;
@@ -31,6 +32,13 @@ public class GUIConstants {
     public static final byte FIND_BUT_COOR_Y = 3;
     public static final byte END_BUT_COOR_X = 0;
     public static final byte END_BUT_COOR_Y = 4;
+    public static final byte FND_FLD_COOR_X = 1;
+    public static final byte FND_FLD_COOR_Y = 3;
+    public static final byte FND_TEXT_COOR_X = 2;
+    public static final byte FND_TEXT_COOR_Y = 3;
 
-    //Login text and
+    //Try-catch-finally text:
+    public static final String NUMBER_ER_TEXT = "Wrong number!";
+    public static final String NUMBER_IF_DONT_HAVE = "We don't have this number of ticket:(";
+    public static final String NUMBER_IF_HAVE = "Check your console!";
 }

@@ -1,35 +1,46 @@
 package OOP.task;
 
+import OOP.task.GUI.GUIConstants;
 import OOP.task.GUI.Initialization;
 import OOP.task.PassengerClasses.Passenger;
 import OOP.task.SortClasses.Sorting;
 import OOP.task.TransportClasses.RailCar;
 import OOP.task.TransportClasses.Train;
+import javafx.scene.control.Alert;
 
 import java.util.Scanner;
 
 public class Manipulations {
-    public static void findAPassengerByNumberOfTicket(Initialization init) {
-        Scanner scanner = new Scanner(System.in);
-        int number;
-        System.out.println("Enter number of ticket:");
-        number = scanner.nextInt();
-
+    public static void findAPassengerByNumberOfTicket(Initialization init, int number) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        boolean flag = false;
         if(999 < number && number < 10000) {
             for(RailCar element : init.getTrain().getTheRailCarList()) {
                 for(Passenger pasElement : element.getPassengerList()) {
                     if(number == pasElement.getTicketNumber().get()) {
+                        flag = true;
                         pasElement.print();
                     }
                 }
             }
         }
         else {
-            System.out.println("Incorrect input of ticket!");
+            alert.setHeaderText(GUIConstants.NUMBER_ER_TEXT);
+            alert.show();
+            return;
         }
-        scanner.close();
+        if(!flag) {
+            alert.setAlertType(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(GUIConstants.NUMBER_IF_DONT_HAVE);
+            alert.show();
+        }
+        else {
+            alert.setAlertType(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(GUIConstants.NUMBER_IF_HAVE);
+            alert.show();
+        }
     }
-    public static void printInfromation(Train train) {
+    public static void printInformation(Train train) {
         RailCar railCar;
         Passenger passenger;
         for(int i = 0; i < train.getAmountOfRailCars(); i++) {
@@ -38,7 +49,7 @@ public class Manipulations {
             for(int j = 0; j < railCar.getAmountOfPassengers(); j++) {
                 passenger = railCar.getAPassengerFromList(j);
 
-                System.out.println("\n___Passanger [" + (j + 1) + "]: " + "___");
+                System.out.println("\n___Passenger [" + (j + 1) + "]: " + "___");
                 System.out.printf("[%d] Number of ID: ", i + 1);
                 System.out.println(passenger.getNumberOfID().get());
                 System.out.printf("[%d] Number of Ticket: ", i + 1);
