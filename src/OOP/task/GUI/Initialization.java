@@ -1,6 +1,7 @@
 package OOP.task.GUI;
 
 import OOP.task.TransportClasses.Train;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -38,4 +39,6 @@ public class Initialization {
 
     //Here we keep our gridPane
     public GridPane gridPane = new GridPane();
+    public Insets insets = new Insets(GUIConstants.INSETS_TOP, GUIConstants.INSETS_RIGHT,
+               GUIConstants.INSETS_BOTTOM, GUIConstants.INSETS_LEFT);
 }

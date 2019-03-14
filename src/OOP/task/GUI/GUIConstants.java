@@ -9,6 +9,7 @@ public class GUIConstants {
     public static final byte INSETS_LEFT = 10;
 
     //Menu gaps
+    public static final String APP_NAME = "Train is here";
     public static final String FIRST_GAP_TEXT = "Create a train";
     public static final String SECOND_GAP_TEXT = "Print piece of Info";
     public static final String THIRD_GAP_TEXT = "Sort passengers";
@@ -18,7 +19,9 @@ public class GUIConstants {
     //Text coordinates and strings
     public static final byte CR_TEXT_COR_X = 1;
     public static final byte CR_TEXT_COR_Y = 0;
+    public static final String CREATING_TITLE = "Information of creating process";
     public static final String CREATING_TEXT = "Train is created!";
+    public static final String UNCREATING_TEXT = "We're not able to create anything";
     public static final String FIND_FIELD_TEXT = "<-Tickets' number";
 
     //Menu coordinates
@@ -38,7 +41,11 @@ public class GUIConstants {
     public static final byte FND_TEXT_COOR_Y = 3;
 
     //Try-catch-finally text:
-    public static final String NUMBER_ER_TEXT = "Wrong number!";
+    public static final String NUMBER_ER_TEXT = "Wrong number!It should have 4 digits";
     public static final String NUMBER_IF_DONT_HAVE = "We don't have this number of ticket:(";
     public static final String NUMBER_IF_HAVE = "Check your console!";
+    public static final String IF_DONT_HAVE_A_TRAIN = "A train doesn't exist!";
+    public static final String PRINT_INFORM_TITLE = "Cannot to print at all..";
+    public static final String PRINT_INFORM_TEXT = "Have you got anything to print?";
+    public static final String CHECK_WHERE_IS_RESULT = "Output is in your console.";
 }

@@ -5,10 +5,8 @@ import OOP.task.GUI.ButtonManipulations;
 import OOP.task.GUI.GUIConstants;
 import OOP.task.GUI.Initialization;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.util.logging.Logger;
@@ -23,8 +21,7 @@ public class Runner extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Initialization init = new Initialization();
-        init.gridPane.setPadding(new Insets(GUIConstants.INSETS_TOP, GUIConstants.INSETS_RIGHT,
-                GUIConstants.INSETS_BOTTOM, GUIConstants.INSETS_LEFT));
+        init.gridPane.setPadding(init.insets);
 
         init.gridPane.setVgap(GUIConstants.SET_V_GAP);
         init.gridPane.setHgap(GUIConstants.SET_H_GAP);
@@ -63,12 +60,13 @@ public class Runner extends Application {
 
         init.endProgramButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                //   ButtonManipulations.makeClearMethod(init);
+                stage.close();
             }
         });
 
         Scene scene = new Scene(init.gridPane, 400, 200);
         stage.setScene(scene);
+        stage.setTitle(GUIConstants.APP_NAME);
         stage.show();
     }
 }

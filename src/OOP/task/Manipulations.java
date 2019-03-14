@@ -8,8 +8,6 @@ import OOP.task.TransportClasses.RailCar;
 import OOP.task.TransportClasses.Train;
 import javafx.scene.control.Alert;
 
-import java.util.Scanner;
-
 public class Manipulations {
     public static void findAPassengerByNumberOfTicket(Initialization init, int number) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -40,20 +38,37 @@ public class Manipulations {
             alert.show();
         }
     }
+
     public static void printInformation(Train train) {
         RailCar railCar;
         Passenger passenger;
-        for(int i = 0; i < train.getAmountOfRailCars(); i++) {
-            railCar = train.getARailCarElement(i);
-            System.out.println("\n========Car's number is: " + (i + 1) + "========");
-            for(int j = 0; j < railCar.getAmountOfPassengers(); j++) {
-                passenger = railCar.getAPassengerFromList(j);
+        Alert alert;
+        boolean flagOfPrint = true;
+        try {
+            for(int i = 0; i < train.getAmountOfRailCars(); i++) {
+                railCar = train.getARailCarElement(i);
+                System.out.println("\n========Car's number is: " + (i + 1) + "========");
+                for(int j = 0; j < railCar.getAmountOfPassengers(); j++) {
+                    passenger = railCar.getAPassengerFromList(j);
 
-                System.out.println("\n___Passenger [" + (j + 1) + "]: " + "___");
-                System.out.printf("[%d] Number of ID: ", i + 1);
-                System.out.println(passenger.getNumberOfID().get());
-                System.out.printf("[%d] Number of Ticket: ", i + 1);
-                System.out.println(passenger.getTicketNumber().get());
+                    System.out.println("\n___Passenger [" + (j + 1) + "]: " + "___");
+                    System.out.printf("[%d] Number of ID: ", i + 1);
+                    System.out.println(passenger.getNumberOfID().get());
+                    System.out.printf("[%d] Number of Ticket: ", i + 1);
+                    System.out.println(passenger.getTicketNumber().get());
+                }
+            }
+        } catch (Exception exception) {
+            flagOfPrint = false;
+            alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle(GUIConstants.PRINT_INFORM_TITLE);
+            alert.setHeaderText(GUIConstants.PRINT_INFORM_TEXT);
+            alert.show();
+        } finally {
+            if(flagOfPrint) {
+                alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(GUIConstants.CHECK_WHERE_IS_RESULT);
+                alert.show();
             }
         }
     }
