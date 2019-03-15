@@ -1,4 +1,4 @@
-package OOP.task;
+package oop.task;
 
 public interface Printable {
    abstract void print();

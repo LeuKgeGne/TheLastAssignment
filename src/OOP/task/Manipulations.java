@@ -1,11 +1,11 @@
-package OOP.task;
+package oop.task;
 
-import OOP.task.GUI.GUIConstants;
-import OOP.task.GUI.Initialization;
-import OOP.task.PassengerClasses.Passenger;
-import OOP.task.SortClasses.Sorting;
-import OOP.task.TransportClasses.RailCar;
-import OOP.task.TransportClasses.Train;
+import oop.task.gui.GUIConstants;
+import oop.task.gui.Initialization;
+import oop.task.passenger_classes.Passenger;
+import oop.task.sort_classes.Sorting;
+import oop.task.transportclasses.RailCar;
+import oop.task.transportclasses.Train;
 import javafx.scene.control.Alert;
 
 public class Manipulations {

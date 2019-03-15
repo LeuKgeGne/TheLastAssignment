@@ -1,8 +1,8 @@
-package OOP.task.GUI;
+package oop.task.gui;
 
-import OOP.task.Manipulations;
-import OOP.task.MyTinyTrainFactory;
-import OOP.task.TransportClasses.Train;
+import oop.task.Manipulations;
+import oop.task.MyTinyTrainFactory;
+import oop.task.transportclasses.Train;
 import javafx.scene.control.Alert;
 
 public class ButtonManipulations {

@@ -1,7 +1,8 @@
-package OOP.task.GUI;
+package oop.task.gui;
 
-import OOP.task.TransportClasses.Train;
+import oop.task.transportclasses.Train;
 import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -43,4 +44,5 @@ public class Initialization {
     public Image image = new Image("file:C:\\Users\\Admin\\IdeaProjects\\TheLastTask\\MenuImage.jpg",
             GUIConstants.IMAGE_WIDTH,GUIConstants.IMAGE_HEIGHT, true, true);
     public ImageView imageView = new ImageView(image);
+    public Scene scene = new Scene(gridPane, GUIConstants.APPLICATION_WIDTH, GUIConstants.APPLICATION_HEIGHT);
 }

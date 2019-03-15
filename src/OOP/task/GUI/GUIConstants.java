@@ -1,6 +1,8 @@
-package OOP.task.GUI;
+package oop.task.gui;
 
-public class GUIConstants {
+public final class GUIConstants {
+    private GUIConstants() {}
+
     public static final byte SET_V_GAP = 10;
     public static final byte SET_H_GAP = 10;
     public static final byte INSETS_TOP = 10;

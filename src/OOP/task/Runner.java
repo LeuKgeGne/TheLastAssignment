@@ -1,25 +1,23 @@
-package OOP.task;
+package oop.task;
 
 import javafx.application.Application;
-import OOP.task.GUI.ButtonManipulations;
-import OOP.task.GUI.GUIConstants;
-import OOP.task.GUI.Initialization;
+import oop.task.gui.ButtonManipulations;
+import oop.task.gui.GUIConstants;
+import oop.task.gui.Initialization;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.util.logging.Logger;
 
 public class Runner extends Application {
-
+    Initialization init = new Initialization();
     private static final Logger logger = Logger.getLogger(Runner.class.getName());
 
     public static void main(String[] args) {
         launch(args);
     }
     @Override
-    public void start(Stage stage) throws Exception {
-        Initialization init = new Initialization();
+    public void start(Stage stage) {
         init.gridPane.setPadding(init.insets);
 
         init.gridPane.setVgap(GUIConstants.SET_V_GAP);
@@ -64,8 +62,8 @@ public class Runner extends Application {
             }
         });
 
-        Scene scene = new Scene(init.gridPane, GUIConstants.APPLICATION_WIDTH, GUIConstants.APPLICATION_HEIGHT);
-        stage.setScene(scene);
+//        Scene scene = new Scene(init.gridPane, GUIConstants.APPLICATION_WIDTH, GUIConstants.APPLICATION_HEIGHT);
+        stage.setScene(init.scene);
         stage.setTitle(GUIConstants.APP_NAME);
         stage.show();
     }

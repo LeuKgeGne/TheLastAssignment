@@ -1,11 +1,9 @@
-package OOP.task;
+package oop.task;
 
-import OOP.task.PassengerClasses.Passenger;
-
+import oop.task.passenger_classes.Passenger;
 import java.util.Random;
 
 public class MyTinyPassengerFactory {
-    //optional return or not??
     public static Passenger createAPassenger() {
         Passenger factoryPassenger = new Passenger();
         factoryPassenger.setTicketNumber(randomTicketNumber());

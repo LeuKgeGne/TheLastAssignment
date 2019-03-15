@@ -1,11 +1,8 @@
-package OOP.task;
+package oop.task;
 
-import OOP.task.PassengerClasses.Passenger;
-import OOP.task.TransportClasses.RailCar;
-import OOP.task.TransportClasses.Train;
-
+import oop.task.transportclasses.RailCar;
+import oop.task.transportclasses.Train;
 import java.util.Random;
-
 import static jdk.nashorn.internal.objects.NativeMath.random;
 
 public class MyTinyTrainFactory {
@@ -19,7 +16,6 @@ public class MyTinyTrainFactory {
             --amountOfRailCars;
         }
         train.setNumberOfWay(randomWay());
-
         return train;
     }
 
@@ -33,7 +29,6 @@ public class MyTinyTrainFactory {
 
             --amountOfPassengers;
         }
-
         return railCar;
     }
 

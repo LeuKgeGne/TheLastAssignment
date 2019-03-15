@@ -1,8 +1,8 @@
-package OOP.task.SortClasses;
+package oop.task.sort_classes;
 
-import OOP.task.Constants;
-import OOP.task.PassengerClasses.Passenger;
-import OOP.task.TransportClasses.RailCar;
+import oop.task.Constants;
+import oop.task.passenger_classes.Passenger;
+import oop.task.transportclasses.RailCar;
 
 import java.util.ArrayList;
 import java.util.Comparator;

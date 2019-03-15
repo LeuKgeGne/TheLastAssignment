@@ -1,4 +1,4 @@
-package OOP.task.PassengerClasses;
+package oop.task.passenger_classes;
 
 import java.util.Optional;
 
