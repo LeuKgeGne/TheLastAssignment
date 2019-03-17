@@ -16,9 +16,9 @@ public class Sorting {
         myList.sort(comparingByTicket);
     }
 
-    public static void sortPassengers(RailCar railCar, int first_index, int second_index) {
-        ListIterator<Passenger> first = railCar.getPassengerList().listIterator(first_index);
-        ListIterator<Passenger> second  = railCar.getPassengerList().listIterator(first_index);
+    public static void sortPassengers(RailCar railCar, int firstIndex, int secondIndex) {
+        ListIterator<Passenger> first = railCar.getPassengerList().listIterator(firstIndex);
+        ListIterator<Passenger> second  = railCar.getPassengerList().listIterator(firstIndex);
         ListIterator<Passenger> comparing = null;
         Passenger passenger;
         int amount = railCar.getPassengerList().size();

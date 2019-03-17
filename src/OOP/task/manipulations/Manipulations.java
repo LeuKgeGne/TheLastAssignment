@@ -78,8 +78,8 @@ public class Manipulations {
         RailCar railCar;
         for(int i = 0; i < train.getAmountOfRailCars(); i++) {
             railCar = train.getARailCarElement(i);
-          //  Sorting.sortByTicket(railCar.getPassengerList());
-            Sorting.sortPassengers(railCar, Constants.FIRST_INDEX, railCar.getAmountOfPassengers() - 1);
+            Sorting.sortByTicket(railCar.getPassengerList());
+           // Sorting.sortPassengers(railCar, Constants.FIRST_INDEX, railCar.getAmountOfPassengers() - 1);
         }
     }
 }
