@@ -22,12 +22,14 @@ public final class Constants {
     public static final byte MAX_WAY_NUMBER = 11;
 
     public static final String CATCH_END = "Sort is completed!(Sorting.java)";
-    public static final String CREAT_TEXT = "\nCreated a train.";
+    public static final String CREATE_TEXT = "Created a train.";
     public static final String PRINT_TEXT = "Printed the train.";
-    public static final String PRINT_E_TEXT = "Tried to print an empty list.";
+    public static final String WRITE_INFO = "Information's written into file.";
     public static final String SORT_TEXT = "Sorted the list with passengers.";
-    public static final String SORT_E_TEXT = "Tried to sort an empty list.";
+    public static final String A_TRY_TO_FIND_TEXT = "Tried to find a passenger.";
     public static final String END_TEXT = "Ended the program.";
+    public static final String SORT_EX_WARNING = "Empty train to sort!";
+    public static final String WRITE_FILE_ERROR = "Empty train to write";
 
     public static final byte FIRST_INDEX = 0;
 }

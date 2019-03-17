@@ -37,42 +37,49 @@ public class Runner extends Application {
         init.createButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 ButtonManipulations.createATrain(init);
+                logger.info(Constants.CREATE_TEXT);
             }
         });
 
         init.printButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 ButtonManipulations.printInformation(init.getTrain());
+                logger.info(Constants.PRINT_TEXT);
             }
         });
 
         init.sortPassengersButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                //  We should write a sort method here
+                ButtonManipulations.sortPassengers(init.getTrain());
+                logger.info(Constants.SORT_TEXT);
             }
         });
 
         init.readFromFile.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 //  We should write a sort method here
+                logger.info(Constants.CREATE_TEXT);
             }
         });
 
         init.writeIntoFile.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 ButtonManipulations.callWriter(init.getTrain());
+                logger.info(Constants.WRITE_INFO);
             }
         });
 
         init.findPassengerButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 ButtonManipulations.findAnElement(init);
+                logger.info(Constants.A_TRY_TO_FIND_TEXT);
             }
         });
 
         init.endProgramButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 stage.close();
+                logger.info(Constants.END_TEXT);
             }
         });
 

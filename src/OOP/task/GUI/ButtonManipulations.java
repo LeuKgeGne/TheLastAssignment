@@ -4,6 +4,7 @@ import oop.task.hand_made_exception.EmptyTrainException;
 import oop.task.manipulations.FileManipulations;
 import oop.task.manipulations.Manipulations;
 import oop.task.factory.MyTinyTrainFactory;
+import oop.task.source.Constants;
 import oop.task.transportclasses.Train;
 import javafx.scene.control.Alert;
 
@@ -57,16 +58,42 @@ public class ButtonManipulations {
         }
         catch (EmptyTrainException exception) {
             alert.setTitle(GUIConstants.PRINT_INFORM_TITLE);
-            alert.setHeaderText(GUIConstants.PRINT_INFORM_TEXT);
+            alert.setHeaderText(Constants.SORT_EX_WARNING);
             alert.showAndWait();
         }
     }
 
     public static void callWriter(Train train) {
-        FileManipulations.writeIntoFile(train);
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        try {
+            if(train != null) {
+                FileManipulations.writeIntoFile(train);
+            }
+            else {
+                throw new EmptyTrainException();
+            }
+        }
+        catch (EmptyTrainException exception) {
+            alert.setTitle(GUIConstants.PRINT_INFORM_TITLE);
+            alert.setHeaderText(Constants.WRITE_FILE_ERROR);
+            alert.showAndWait();
+        }
     }
 
     public static void sortPassengers(Train train) {
-        Manipulations.completePassengerSorting(train);
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        try {
+            if(train != null) {
+                Manipulations.completePassengerSorting(train);
+            }
+            else {
+                throw new EmptyTrainException();
+            }
+        }
+        catch (EmptyTrainException exception) {
+            alert.setTitle(GUIConstants.PRINT_INFORM_TITLE);
+            alert.setHeaderText(GUIConstants.PRINT_INFORM_TEXT);
+            alert.showAndWait();
+        }
     }
 }
