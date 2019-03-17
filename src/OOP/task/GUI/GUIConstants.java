@@ -12,7 +12,7 @@ public final class GUIConstants {
 
     //Menu gaps
     public static final int APPLICATION_WIDTH = 340;
-    public static final int APPLICATION_HEIGHT = 370;
+    public static final int APPLICATION_HEIGHT = 440;
     public static final int IMAGE_WIDTH = 200;
     public static final int IMAGE_HEIGHT = 200;
 
@@ -21,7 +21,10 @@ public final class GUIConstants {
     public static final String SECOND_GAP_TEXT = "Print piece of Info";
     public static final String THIRD_GAP_TEXT = "Sort passengers";
     public static final String FOURTH_GAP_TEXT = "Find a passenger";
-    public static final String FIVES_GAP_TEXT = "End the program";
+    public static final String FIVES_GAP_TEXT = "Read from File";
+    public static final String SIXTH_GAP_TEXT = "Write into File";
+    public static final String SEVENTH_GAP_TEXT = "End the program";
+
 
     //Text coordinates and strings
     public static final byte CR_TEXT_COR_X = 1;
@@ -42,8 +45,14 @@ public final class GUIConstants {
     public static final byte SORT_BUT_COOR_Y = 3;
     public static final byte FIND_BUT_COOR_X = 1;
     public static final byte FIND_BUT_COOR_Y = 5;
+
+    public static final byte READ_BUT_COOR_X = 0;
+    public static final byte READ_BUT_COOR_Y = 6;
+    public static final byte WRITE_BUT_COOR_X = 0;
+    public static final byte WRITE_BUT_COOR_Y = 7;
+
     public static final byte END_BUT_COOR_X = 0;
-    public static final byte END_BUT_COOR_Y = 6;
+    public static final byte END_BUT_COOR_Y = 8;
     public static final byte FND_FLD_COOR_X = 0;
     public static final byte FND_FLD_COOR_Y = 5;
     public static final byte FND_TEXT_COOR_X = 0;

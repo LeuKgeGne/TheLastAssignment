@@ -1,6 +1,6 @@
 package oop.task.passenger_classes;
 
-import oop.task.Printable;
+import oop.task.source.Printable;
 
 import java.util.Optional;
 

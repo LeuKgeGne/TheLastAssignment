@@ -30,8 +30,11 @@ public class Initialization {
     public Button createButton = new Button(GUIConstants.FIRST_GAP_TEXT);
     public Button printButton = new Button(GUIConstants.SECOND_GAP_TEXT);
     public Button sortPassengersButton = new Button(GUIConstants.THIRD_GAP_TEXT);
-    public Button endProgramButton = new Button(GUIConstants.FIVES_GAP_TEXT);
     public Button findPassengerButton = new Button(GUIConstants.FOURTH_GAP_TEXT);
+    public Button readFromFile = new Button(GUIConstants.FIVES_GAP_TEXT);
+    public Button writeIntoFile = new Button(GUIConstants.SIXTH_GAP_TEXT);
+    public Button endProgramButton = new Button(GUIConstants.SEVENTH_GAP_TEXT);
+
 
     //Creating a find field
     public Text findText = new Text(GUIConstants.FIND_FIELD_TEXT);

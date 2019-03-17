@@ -1,6 +1,6 @@
 package oop.task.sort_classes;
 
-import oop.task.Constants;
+import oop.task.source.Constants;
 import oop.task.passenger_classes.Passenger;
 import oop.task.transportclasses.RailCar;
 

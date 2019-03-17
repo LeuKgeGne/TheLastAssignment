@@ -1,7 +1,7 @@
 package oop.task.transportclasses;
 
 import oop.task.passenger_classes.Passenger;
-import oop.task.Printable;
+import oop.task.source.Printable;
 import java.util.ArrayList;
 
 public class RailCar implements Printable {
