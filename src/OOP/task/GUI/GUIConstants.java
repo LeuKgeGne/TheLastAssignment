@@ -29,6 +29,7 @@ public final class GUIConstants {
     //Text coordinates and strings
     public static final byte CR_TEXT_COR_X = 1;
     public static final byte CR_TEXT_COR_Y = 0;
+    public static final String PICTURES_URL = "file:C:\\Users\\Admin\\IdeaProjects\\TheLastTask\\MenuImage.jpg";
     public static final String CREATING_TITLE = "Information of creating process";
     public static final String CREATING_TEXT = "Train is created!";
     public static final String UNCREATING_TEXT = "We're not able to create anything";

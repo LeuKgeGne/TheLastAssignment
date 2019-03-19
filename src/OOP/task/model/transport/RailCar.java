@@ -1,6 +1,6 @@
-package oop.task.transportclasses;
+package oop.task.model.transport;
 
-import oop.task.passenger_classes.Passenger;
+import oop.task.model.passengers.Passenger;
 import oop.task.source.Printable;
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package oop.task.transportclasses;
+package oop.task.model.transport;
 import java.util.ArrayList;
 
 

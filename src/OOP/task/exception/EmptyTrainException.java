@@ -1,4 +1,4 @@
-package oop.task.hand_made_exception;
+package oop.task.exception;
 
 public class EmptyTrainException extends Exception {
         private String train;

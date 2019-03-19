@@ -21,7 +21,11 @@ public final class Constants {
     public static final byte MIN_WAY_NUMBER = 1;
     public static final byte MAX_WAY_NUMBER = 11;
 
-    public static final String CATCH_END = "Sort is completed!(Sorting.java)";
+    public static final int FIRST_POINT = 999;
+    public static final int LAST_POINT = 10000;
+
+    public static final String FILE_NAME = "Passengers.txt";
+    public static final String FILE_WRITING_ERROR = "We've got an error, while writing into file!";
     public static final String CREATE_TEXT = "Created a train.";
     public static final String PRINT_TEXT = "Printed the train.";
     public static final String WRITE_INFO = "Information's written into file.";
@@ -31,5 +35,4 @@ public final class Constants {
     public static final String SORT_EX_WARNING = "Empty train to sort!";
     public static final String WRITE_FILE_ERROR = "Empty train to write";
 
-    public static final byte FIRST_INDEX = 0;
 }

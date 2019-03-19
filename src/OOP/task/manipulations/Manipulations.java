@@ -1,19 +1,19 @@
 package oop.task.manipulations;
 
-import oop.task.source.Constants;
 import oop.task.gui.GUIConstants;
 import oop.task.gui.Initialization;
-import oop.task.passenger_classes.Passenger;
-import oop.task.sort_classes.Sorting;
-import oop.task.transportclasses.RailCar;
-import oop.task.transportclasses.Train;
+import oop.task.model.passengers.Passenger;
+import oop.task.sorting.Sorting;
+import oop.task.model.transport.RailCar;
+import oop.task.model.transport.Train;
 import javafx.scene.control.Alert;
+import oop.task.source.Constants;
 
 public class Manipulations {
     public static void findAPassengerByNumberOfTicket(Initialization init, int number) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         boolean flag = false;
-        if(999 < number && number < 10000) {
+        if(Constants.FIRST_POINT < number && number < Constants.LAST_POINT) {
             for(RailCar element : init.getTrain().getTheRailCarList()) {
                 for(Passenger pasElement : element.getPassengerList()) {
                     if(number == pasElement.getTicketNumber().get()) {
@@ -40,6 +40,8 @@ public class Manipulations {
         }
     }
 
+    //clearly understand that I'm able to add constants for the method,
+    //however I believe this is the best way to release this case
     public static void printInformation(Train train) {
         RailCar railCar;
         Passenger passenger;
@@ -79,7 +81,6 @@ public class Manipulations {
         for(int i = 0; i < train.getAmountOfRailCars(); i++) {
             railCar = train.getARailCarElement(i);
             Sorting.sortByTicket(railCar.getPassengerList());
-           // Sorting.sortPassengers(railCar, Constants.FIRST_INDEX, railCar.getAmountOfPassengers() - 1);
         }
     }
 }

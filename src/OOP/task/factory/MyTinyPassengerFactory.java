@@ -1,16 +1,12 @@
 package oop.task.factory;
 
-import oop.task.passenger_classes.Passenger;
+import oop.task.model.passengers.Passenger;
 import oop.task.source.Constants;
-
 import java.util.Random;
 
 public class MyTinyPassengerFactory {
     public static Passenger createAPassenger() {
-        Passenger factoryPassenger = new Passenger();
-        factoryPassenger.setTicketNumber(randomTicketNumber());
-        factoryPassenger.setNumberOfID(convertToString());
-
+        Passenger factoryPassenger = new Passenger(randomTicketNumber(), convertToString());
         return factoryPassenger;
     }
 

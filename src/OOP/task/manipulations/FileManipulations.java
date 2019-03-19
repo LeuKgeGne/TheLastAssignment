@@ -1,15 +1,16 @@
 package oop.task.manipulations;
 
 import javafx.scene.control.Alert;
-import oop.task.passenger_classes.Passenger;
-import oop.task.transportclasses.RailCar;
-import oop.task.transportclasses.Train;
+import oop.task.model.passengers.Passenger;
+import oop.task.model.transport.RailCar;
+import oop.task.model.transport.Train;
+import oop.task.source.Constants;
 
 import java.io.*;
 
 public class FileManipulations {
     public static void writeIntoFile(Train train) {
-        try(FileWriter writer = new FileWriter("Passengers.txt",false)) {
+        try(FileWriter writer = new FileWriter(Constants.FILE_NAME,false)) {
             for(RailCar railCar : train.getTheRailCarList()) {
                 for(Passenger passenger : railCar.getPassengerList()) {
                     writer.write(passenger.getNumberOfID().get() + '\n');
@@ -21,7 +22,7 @@ public class FileManipulations {
         }
         catch (IOException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("We've got an error, while writing into file!");
+            alert.setHeaderText(Constants.FILE_WRITING_ERROR);
         }
     }
 }

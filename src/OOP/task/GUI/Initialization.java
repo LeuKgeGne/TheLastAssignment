@@ -1,6 +1,6 @@
 package oop.task.gui;
 
-import oop.task.transportclasses.Train;
+import oop.task.model.transport.Train;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -44,8 +44,8 @@ public class Initialization {
     public GridPane gridPane = new GridPane();
     public Insets insets = new Insets(GUIConstants.INSETS_TOP, GUIConstants.INSETS_RIGHT,
                GUIConstants.INSETS_BOTTOM, GUIConstants.INSETS_LEFT);
-    public Image image = new Image("file:C:\\Users\\Admin\\IdeaProjects\\TheLastTask\\MenuImage.jpg",
-            GUIConstants.IMAGE_WIDTH,GUIConstants.IMAGE_HEIGHT, true, true);
+    public Image image = new Image(GUIConstants.PICTURES_URL, GUIConstants.IMAGE_WIDTH,
+            GUIConstants.IMAGE_HEIGHT, true, true);
     public ImageView imageView = new ImageView(image);
     public Scene scene = new Scene(gridPane, GUIConstants.APPLICATION_WIDTH, GUIConstants.APPLICATION_HEIGHT);
 }

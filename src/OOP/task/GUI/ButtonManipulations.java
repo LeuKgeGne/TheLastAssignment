@@ -1,14 +1,17 @@
 package oop.task.gui;
 
-import oop.task.hand_made_exception.EmptyTrainException;
+import oop.task.exception.EmptyTrainException;
 import oop.task.manipulations.FileManipulations;
 import oop.task.manipulations.Manipulations;
 import oop.task.factory.MyTinyTrainFactory;
 import oop.task.source.Constants;
-import oop.task.transportclasses.Train;
+import oop.task.model.transport.Train;
 import javafx.scene.control.Alert;
 
-public class ButtonManipulations {
+public final class ButtonManipulations {
+    private ButtonManipulations() {}
+    public static Alert alert = new Alert(Alert.AlertType.WARNING);
+
     public static void findAnElement(Initialization init) {
         try {
             if(init.getTrain() != null) {
@@ -19,16 +22,14 @@ public class ButtonManipulations {
                 throw new EmptyTrainException();
             }
         } catch (EmptyTrainException exception) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setHeaderText(GUIConstants.IF_DONT_HAVE_A_TRAIN);
             alert.show();
         }
     }
 
     public static void createATrain(Initialization init) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
         try{
-            init.setTrain(MyTinyTrainFactory.createTheTrain());
+            init.setTrain(MyTinyTrainFactory.createTheTrain(new Train()));
             if(init.getTrain() != null) {
                 alert.setAlertType(Alert.AlertType.INFORMATION);
                 alert.setTitle(GUIConstants.CREATING_TITLE);
@@ -40,14 +41,12 @@ public class ButtonManipulations {
             }
         }
         catch (EmptyTrainException exception)  {
-            alert.setAlertType(Alert.AlertType.WARNING);
             alert.setHeaderText(GUIConstants.UNCREATING_TEXT);
             alert.show();
         }
     }
 
     public static void printInformation(Train train) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
         try {
             if(train != null) {
                 Manipulations.printInformation(train);
@@ -64,7 +63,6 @@ public class ButtonManipulations {
     }
 
     public static void callWriter(Train train) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
         try {
             if(train != null) {
                 FileManipulations.writeIntoFile(train);
@@ -81,7 +79,6 @@ public class ButtonManipulations {
     }
 
     public static void sortPassengers(Train train) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
         try {
             if(train != null) {
                 Manipulations.completePassengerSorting(train);

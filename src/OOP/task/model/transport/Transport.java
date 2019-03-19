@@ -1,4 +1,4 @@
-package oop.task.transportclasses;
+package oop.task.model.transport;
 
 import oop.task.source.Printable;
 

@@ -1,15 +1,12 @@
 package oop.task.factory;
 
-import oop.task.factory.MyTinyPassengerFactory;
 import oop.task.source.Constants;
-import oop.task.transportclasses.RailCar;
-import oop.task.transportclasses.Train;
-import java.util.Random;
+import oop.task.model.transport.RailCar;
+import oop.task.model.transport.Train;
 import static jdk.nashorn.internal.objects.NativeMath.random;
 
 public class MyTinyTrainFactory {
-    public static Train createTheTrain() {
-        Train train = new Train();
+    public static Train createTheTrain(Train train) {
         byte amountOfRailCars = randomAmountOfRailCars();
 
         while(amountOfRailCars > 0) {
